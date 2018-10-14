@@ -16,7 +16,7 @@
     "gitlab": "^4.2.0"
   },
   "peerDependencies": {
-    "hubot": "2.x"
+    "hubot": "3.x"
   },
   "devDependencies": {
     "chai": "^4.2.0",
