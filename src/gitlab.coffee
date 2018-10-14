@@ -18,9 +18,11 @@
 # Authors:
 #   Ryan Southern <rsouthern@sevaa.com>
 
-gitlab = (require 'gitlab')
-  url:   process.env.HUBOT_GITLAB_URL
+Gitlab = require('gitlab/dist/es5').default
+gitlab = new Gitlab({
+  url:   process.env.HUBOT_GITLAB_URL,
   token: process.env.HUBOT_GITLAB_ACCESSKEY
+})
 
 gitlabList = (msg) ->
   gitlab.projects.all (projects) ->
